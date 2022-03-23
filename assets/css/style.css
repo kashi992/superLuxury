@@ -265,9 +265,9 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .roadmap_wrapper .roadmap_timeline .timeline .event {
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   position: relative;
-  padding-top: 70px;
+  padding-top: 110px;
 }
 
 .roadmap_wrapper .roadmap_timeline .timeline .event img {
@@ -283,19 +283,23 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .roadmap_wrapper .roadmap_timeline .timeline .event:first-of-type:before {
-  content: url("../images/start_text__iframe.svg");
+  background: url("../images/start_text__iframe.svg");
+  left: -280px;
 }
 
 .roadmap_wrapper .roadmap_timeline .timeline .event:nth-of-type(2)::before {
-  content: url("../images/1st_iframe.svg");
+  background: url("../images/1st_iframe.svg");
+  left: -280px;
 }
 
 .roadmap_wrapper .roadmap_timeline .timeline .event:nth-of-type(3)::before {
-  content: url("../images/2nd_iframe.svg");
+  background: url("../images/2nd_iframe.svg");
+  left: -280px;
 }
 
 .roadmap_wrapper .roadmap_timeline .timeline .event:nth-of-type(4)::before {
-  content: url("../images/3rd_iframe.svg");
+  background: url("../images/3rd_iframe.svg");
+  left: -285px;
 }
 
 .roadmap_wrapper .roadmap_timeline .timeline .event:before,
@@ -306,15 +310,154 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .roadmap_wrapper .roadmap_timeline .timeline .event:before {
+  content: " ";
   left: -257px;
   text-align: right;
-  min-width: 120px;
+  min-width: 180px;
+  height: 55px;
+  display: inline-block;
+  background-repeat: no-repeat !important;
+  background-position-x: right !important;
+  top: 35px;
 }
 
-.roadmap_wrapper .roadmap_timeline .timeline .event:after {
+.roadmap_wrapper .timeline .event:after {
   left: -80px;
-  content: url(../images/Polygon.svg);
+  content: " ";
+  background: url(../images/Polygon.svg);
   top: -40px;
+  min-width: 111px;
+  height: 111px;
+  display: inline-block;
+  background-repeat: no-repeat !important;
+  background-position-x: center !important;
+}
+
+.team_wrapper {
+  margin-bottom: 180px;
+}
+
+.team_wrapper .teams_list {
+  display: flex;
+  align-items: center;
+  gap: 59px 151px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team_wrapper .team_box {
+  max-width: 291px;
+  width: 100%;
+}
+
+.team_wrapper .team_box__title {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.team_wrapper .team_box__content p {
+  text-transform: uppercase;
+  font-family: Gilroy_light;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffffd1;
+  margin-bottom: 21px;
+}
+
+.social_icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social_icons img {
+  border-radius: 25px;
+}
+
+.stayTuned_wrapper {
+  background-image: url("../images/stayTuned_bg.jpg");
+  background-size: cover;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stayTuned_wrapper .social_icons {
+  align-items: flex-end;
+  padding-bottom: 50px;
+}
+
+.faq_wrapper {
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 56px;
+}
+
+.faq_wrapper__inner .faqanswer {
+  display: none;
+  max-width: 550px;
+  padding: 10px 15px 10px 40px;
+}
+
+.faq_wrapper__inner .faqanswer p {
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 0px !important;
+  font-family: Gilroy_light;
+}
+
+.faq_wrapper__inner .faq_question_box {
+  border-bottom: 1px solid #d0d0d070;
+}
+
+.faq_wrapper__inner .togglefaq {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-family: 'McLaren', cursive;
+  padding: 10px 15px;
+  line-height: 20px;
+  display: block;
+  max-width: 550px;
+  margin-bottom: -1px;
+}
+
+.faq_wrapper__inner .fa-play {
+  color: #ffffff;
+  margin-right: 15px;
+  font-size: 12px;
+  line-height: 23px;
+  float: left;
+}
+
+.faq_wrapper__inner .icon-minus {
+  color: #ffffff;
+  margin-right: 15px;
+  font-size: 12px;
+  line-height: 23px;
+  float: left;
+  transform: rotate(90deg);
+}
+
+.faq_wrapper__inner p {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+  .hero_wrapper img {
+    height: fit-content;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .stayTuned_wrapper {
+    height: 33vh;
+  }
+  .team_wrapper {
+    margin-bottom: 90px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -335,4 +478,59 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /*// Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  .hero_wrapper__content h6 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .roadmap_wrapper .roadmap_timeline .timeline {
+    padding: 30px 0px 0px 20px;
+    max-width: 260px;
+    margin-right: 15px;
+  }
+  .roadmap_wrapper .timeline .event:after {
+    left: -62px;
+    min-width: 80px;
+    height: 80px;
+    background-size: contain;
+  }
+  .roadmap_wrapper .roadmap_timeline .timeline .event:before {
+    background-size: contain !important;
+    top: 28px;
+    height: 30px;
+    left: -160px !important;
+    min-width: unset;
+    width: 70px;
+  }
+  .roadmap_wrapper .roadmap_timeline .timeline .event:first-of-type:before {
+    left: -130px !important;
+  }
+  .roadmap_wrapper .roadmap_timeline .timeline .event p {
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 16px;
+  }
+  .roadmap_wrapper .roadmap_timeline .timeline .event img {
+    margin-bottom: 16px;
+  }
+  .roadmap_wrapper .roadmap_timeline .timeline .event {
+    padding-top: 90px;
+  }
+  .stayTuned_wrapper .social_icons {
+    padding-bottom: 20px;
+  }
+  .faq_wrapper__inner .togglefaq {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .hero_wrapper__content {
+    margin: 6px auto 40px;
+  }
+  .roadmap_wrapper .roadmap_title {
+    margin-bottom: 0px;
+  }
+  .stayTuned_wrapper {
+    height: 26vh;
+  }
+}
 /*# sourceMappingURL=style.css.map */
