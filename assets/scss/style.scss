@@ -40,24 +40,36 @@ $darkYellow: #dbc677;
     padding: 0px 26px;
 }
 
+// fonts
+@font-face {
+    font-family: Gilroy_light;
+    src: url('../fonts/Gilroy-Light.ttf');
+}
 
+@font-face {
+    font-family: Gilroy_regular;
+    src: url('../fonts/Gilroy-Regular.ttf');
+}
 
 body {
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
     line-height: 1.2;
     letter-spacing: normal;
     margin: 0;
-    overflow-y: auto;
     width: 100%;
-    background-color: #ffffff;
-    color: $black;
+    background-color: rgb(11, 11, 11);
+    color: $white;
     box-sizing: border-box;
+    font-family: Gilroy_regular;
 }
 
 
 .main_body {
     overflow-x: hidden;
+}
+
+.container {
+    max-width: 1215px;
 }
 
 .transparent_list .list-group-item {
@@ -184,14 +196,236 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 
-@media (min-width: 992px) {
+
+// hero wrapper css
+
+.hero_wrapper {
+background-color: #010102;
+    img {
+        height: 150vh;
+        margin: 0 auto;
+        width: 100%;
+    }
+
     
+}
+
+.hero_wrapper__content {
+    max-width: 614px;
+    width: 100%;
+    margin: 6px auto 105px;
+
+    h6 {
+        font-family: Gilroy_light;
+        font-size: 18px;
+        font-style: normal;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: center;
+
+    }
+}
+
+// roadmap css
+.roadmap_wrapper {
+    margin-bottom: 120px;
+    .roadmap_title {
+        max-width: 544px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 34px;
+        height: 76px;
+        position: relative;
+
+        span {
+            &:before {
+                box-shadow: 2px -2px 12px 0px #FFB7FC;
+                content: "";
+                width: 100%;
+                height: 2.5px;
+                background-color: #FF56F6;
+                position: absolute;
+                right: 0;
+                top: 0px;
+                border-radius: 12px;
+            }
+
+            &:after {
+                box-shadow: 2px -2px 12px 0px #FFB7FC;
+                content: "";
+                width: 2.5px;
+                height: 35px;
+                background-color: #FF56F6;
+                position: absolute;
+                right: 0;
+                top: 0px;
+            }
+        }
+
+        &__bottom {
+            &:before {
+                bottom: 0;
+                top: unset !important;
+            }
+
+            &:after {
+                left: 0;
+                bottom: 0;
+                top: unset !important;
+            }
+        }
+    }
+
+    //     .circle_box{
+    //         background: #FFDFFD;
+    // border: 3px solid #FFFFFF;
+    // box-sizing: border-box;
+    // box-shadow: inset 0px 2px 1px rgba(255, 255, 255, 0.8), inset 0px 40px 40px rgba(255, 255, 255, 0.24), inset 0px -6px 18px rgba(255, 255, 255, 0.2), inset 0px -40px 40px rgba(0, 0, 0, 0.1), inset 0px 6px 12px rgba(255, 255, 255, 0.8);
+    // filter: blur(30px);
+    // border-radius: 125.886px;
+    // width: 111px;
+    // height: 90px;
+    // padding: 10px;
+    //     }
+
+    .roadmap_timeline {
+        display: flex;
+        justify-content: center;
+        gap: 27px;
+        flex-wrap: wrap;
+
+        .timeline_side__img {
+            max-width: 360px;
+            width: 100%;
+        }
+
+        .timeline_wrapp {
+            max-width: 680px;
+            width: 100%;
+        }
+
+        .timeline {
+            border-left: 3px solid #FF56F6;
+            border-bottom-right-radius: 4px;
+            border-top-right-radius: 4px;
+            margin: 0 auto;
+            letter-spacing: 0.2px;
+            position: relative;
+            line-height: 1.4em;
+            font-size: 1.03em;
+            padding: 53px 0px 0px 25px;
+            list-style: none;
+            text-align: left;
+            max-width: 460px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: 0px;
+        }
+
+
+
+        .timeline .event:last-of-type {
+            padding-bottom: 40px;
+            margin-bottom: 0;
+            border: none;
+        }
+        .timeline .event
+        {
+            padding-bottom: 80px;
+            position: relative;
+            padding-top: 70px;
+
+            img{
+                margin-bottom: 25px;
+            }
+            p{
+                font-family: Gilroy_light;
+font-size: 20px;
+line-height: 23px;
+letter-spacing: 0em;
+padding-left: 20px;
+
+            }
+            &:first-of-type{
+                &:before {
+                    content: url('../images/start_text__iframe.svg');
+                }
+            }
+
+            &:nth-of-type(2){
+                &::before{
+                    content: url('../images/1st_iframe.svg');
+                }
+            }
+
+            &:nth-of-type(3){
+                &::before{
+                    content: url('../images/2nd_iframe.svg');
+                }
+            }
+            &:nth-of-type(4){
+                &::before{
+                    content: url('../images/3rd_iframe.svg');
+                }
+            }
+
+        }
+        
+
+        .timeline .event:before,
+        .timeline .event:after {
+            position: absolute;
+            display: block;
+            top: 0;
+        }
+
+        .timeline .event:before {
+            left: -257px;
+            text-align: right;
+            min-width: 120px;
+        }
+
+
+
+        .timeline .event:after {
+            left: -80px;
+            content: url(../images/Polygon.svg);
+            top: -40px;
+        }
+
+        
+
+    
+
+    }
+
+
 }
 
 
 
+@media (min-width: 992px) {}
+
+
+@media (max-width: 767px) {
+    .timeline {
+        max-width: 98%;
+        padding: 25px;
+    }
+    .timeline .event {
+        padding-top: 30px;
+    }
+    .timeline .event:before {
+        left: 0px;
+        text-align: left;
+    }
+    .timeline .event:after {
+        left: -31.8px;
+    }
+}
 
 /*// Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {
-    
-}
+@media (max-width: 575.98px) {}
