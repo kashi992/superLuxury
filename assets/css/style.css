@@ -148,10 +148,6 @@ input[type="search"]::-webkit-search-decoration {
   color: #ffffff;
 }
 
-.hero_wrapper {
-  background-color: #010102;
-}
-
 .hero_wrapper img {
   height: 150vh;
   margin: 0 auto;
